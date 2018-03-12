@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import { CompatComponent as Component } from 'ember-glimmer-component';
 import { computed } from '@ember/object';
 
 export default Component.extend({

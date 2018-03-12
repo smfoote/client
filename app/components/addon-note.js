@@ -1,7 +1,4 @@
-import Component from '@ember/component';
+import { Component } from 'ember-glimmer-component';
 
-export default Component.extend({
-  tagName: 'fieldset',
-  classNames: ['note', 'test-addon-note'],
-  content: ''
-});
+export default class extends Component {
+}

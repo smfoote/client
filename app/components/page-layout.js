@@ -22,7 +22,7 @@ export default Component.extend({
       this.get('routing').transitionTo('index', { queryParams: { query: term } });
     }
   },
-  searchForAddons: task(function* (term) {
+  searchForAddons: function* (term) {
     if (term.length === 0) {
       return resolve([]);
     }
@@ -41,8 +41,8 @@ export default Component.extend({
 
     limitedResults.insertAt(1, { isFullSearchLink: true });
     return limitedResults;
-  }).restartable(),
-  goToAddon: task(function* (selected, options) {
+  },
+  goToAddon: function* (selected, options) {
     if (selected.isFullSearchLink) {
       this.goSearch(options.searchText);
     } else {
@@ -50,7 +50,7 @@ export default Component.extend({
       yield this.get('routing').transitionTo('addons.show', selected);
       this.set('selectedAddon', null);
     }
-  }),
+  },
   logoutUser() {
     this.get('session').close().finally(() => {
       this.get('routing').transitionTo('index');

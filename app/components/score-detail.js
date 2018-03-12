@@ -1,10 +1,13 @@
-import Component from '@ember/component';
+import { set } from '@ember/object';
+import { Component } from 'ember-glimmer-component';
 
-export default Component.extend({
-  showExplanation: false,
-  actions: {
-    toggleExplainScore() {
-      this.toggleProperty('showExplanation');
-    }
+export default class extends Component {
+  constructor() {
+    super(...arguments);
+    this.showExplanation = false;
   }
-});
+
+  toggleExplainScore() {
+    set(this, 'showExplanation', !this.showExplanation);
+  }
+}
