@@ -1,7 +1,7 @@
 import { gt } from '@ember/object/computed';
 import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
-import Component from '@ember/component';
+import { CompatComponent as Component } from 'ember-glimmer-component';
 
 export default Component.extend({
   showAll: false,

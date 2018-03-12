@@ -1,5 +1,3 @@
-import Component from '@ember/component';
+import { Component } from 'ember-glimmer-component';
 
-export default Component.extend({
-  tagName: ''
-});
+export default class extends Component {}
