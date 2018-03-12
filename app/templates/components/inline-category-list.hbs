@@ -1,3 +1,4 @@
+<span class="category-list test-category-list">
 {{#each categoriesSortedByAddonCount as |category|}}
   {{#comma-separated list=categoriesSortedByAddonCount item=category as |value separator|}}
     {{#link-to "categories.show" value.slug}}
@@ -16,3 +17,4 @@
     {{/link-to}}
   {{/comma-separated}}
 {{/each}}
+</span>
